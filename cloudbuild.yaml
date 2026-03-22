@@ -4,10 +4,10 @@ steps:
     args: ['build', '-o', 'main', 'main.go']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-east4-docker.pkg.dev/qwiklabs-gcp-00-e81cbc86e54c/my-repository/sample-app:v1.0', '.']
+    args: ['build', '-t', 'us-east4-docker.pkg.dev/qwiklabs-gcp-00-e81cbc86e54c/my-repository/sample-app:v2.0', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-east4-docker.pkg.dev/qwiklabs-gcp-00-e81cbc86e54c/my-repository/sample-app:v1.0']
+    args: ['push', 'us-east4-docker.pkg.dev/qwiklabs-gcp-00-e81cbc86e54c/my-repository/sample-app:v2.0']
 
   - name: 'gcr.io/cloud-builders/kubectl'
     id: 'Deploy'
